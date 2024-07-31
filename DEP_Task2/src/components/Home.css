@@ -1,0 +1,203 @@
+/* src/components/Home.css */
+
+/* Basic layout styles */
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #8554f9;
+  
+}
+
+.create-post-section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family:  Script MT Bold;;
+}
+
+.create-post-section h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #8554f9;
+  font-family:  Script MT Bold;;
+ 
+}
+
+.create-post-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.create-post-form input[type="text"],
+.create-post-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.create-post-form input[type="text"]:focus,
+.create-post-form textarea:focus {
+  border-color: #007bff;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #8554f9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #623db9;
+  transform: scale(1.05);
+}
+
+.toolbar {
+  margin-bottom: 20px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  
+}
+
+.post:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.post-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.edit-btn {
+  background-color: #d14785;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #ae2261;
+}
+
+.delete-btn {
+  background-color: #eb903f;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #fb831a;;
+}
+
+/* Loading animations (spinner) */
+.spinner {
+  border: 4px solid rgba(0, 123, 255, 0.1);
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Micro-interactions (button animations) */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.btn:hover::after {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Transitions (page transitions) */
+.transition-fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.transition-fade.active {
+  opacity: 1;
+}
+
+/* Text animations (typing effect) */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #007bff }
+}

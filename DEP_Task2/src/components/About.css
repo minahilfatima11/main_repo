@@ -1,0 +1,46 @@
+/* src/components/about.css */
+
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about .mission {
+  margin-bottom: 20px;
+}
+
+.about .community {
+  margin-top: 20px;
+}
+
+.about .profile {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #444;
+}
+
+.about .profile-name {
+  font-weight: bold;
+}
+
+.about .profile-story {
+  margin-top: 10px;
+}
